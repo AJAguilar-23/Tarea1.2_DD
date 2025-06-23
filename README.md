@@ -11,7 +11,7 @@ Instalación
 --------------
 1. Clona este repositorio:
 
-   git clone https://github.com/tu-usuario/tu-repo.git
+   git clone https://github.com/AJAguilar-23/Tarea1.2_DD.git
    cd tu-repo
 
 2. Instala las dependencias:
