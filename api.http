@@ -1,0 +1,74 @@
+
+
+### Obtener todos los productos
+GET http://localhost:3000/productos
+
+### Obtener un producto por ID
+GET http://localhost:3000/productos/5
+### Obtener un producto por ID que no existe (para probar 404)
+GET http://localhost:3000/productos/999
+
+### Consulta de productos disponibles
+GET http://localhost:3000/productos/disponibles
+
+### Crear un nuevo producto (ejemplo exitoso)
+POST http://localhost:3000/productos
+Content-Type: application/json
+
+{
+    "nombre": "Auriculares Gaming HyperX",
+    "precio": 99.99,
+    "descripcion": "Auriculares con micrófono retráctil y sonido envolvente 7.1 para gamers.",
+    "disponible": true
+}
+
+### Crear un nuevo producto (ejemplo con nombre faltante para probar validación 400)
+POST http://localhost:3000/productos
+Content-Type: application/json
+
+{
+    "precio": 25.00,
+    "descripcion": "Cargador rápido tipo C de 20W.",
+    "disponible": true
+}
+
+### Crear un nuevo producto (ejemplo con precio inválido para probar validación 400)
+POST http://localhost:3000/productos
+Content-Type: application/json
+
+{
+    "nombre": "Cargador USB-C",
+    "precio": -5.00,
+    "descripcion": "Cargador rápido tipo C de 20W.",
+    "disponible": true
+}
+
+### Crear un nuevo producto (ejemplo con descripción muy corta para probar validación 400)
+POST http://localhost:3000/productos
+Content-Type: application/json
+
+{
+    "nombre": "Adaptador HDMI",
+    "precio": 15.00,
+    "descripcion": "Adaptador",
+    "disponible": true
+}
+
+### Actualizar un producto existente
+# Permite modificar los datos de un producto existente.
+# En este PUT, se espera que envien todos los campos del modelo de datos.
+PUT http://localhost:3000/productos/4
+Content-Type: application/json
+
+{
+    "nombre": "Monitor Curvo UltraWide (Modelo 2024)",
+    "precio": 329.99,
+    "descripcion": "Monitor de 34 pulgadas, modelo 2024, con resolución WQHD mejorada, ideal para productividad y gaming.",
+    "disponible": false
+}
+
+### Eliminar un producto
+# Elimina un producto con base en su ID.
+DELETE http://localhost:3000/productos/5
+
+

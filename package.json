@@ -1,0 +1,25 @@
+{
+  "name": "tarea1.2_dd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AJAguilar-23/Tarea1.2_DD.git"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AJAguilar-23/Tarea1.2_DD/issues"
+  },
+  "homepage": "https://github.com/AJAguilar-23/Tarea1.2_DD#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
